@@ -50,5 +50,5 @@
     <artifactId>article</artifactId>
     <name>Jahia Article</name>
     <packaging>bundle</packaging>
-    <description>These are the custom module (jahiaArticle) for running on a Jahia server.</description>
+    <description>These are the custom module (Jahia Article) for running on a Jahia server.</description>
 </project>
