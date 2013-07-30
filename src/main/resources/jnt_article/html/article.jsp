@@ -9,7 +9,6 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 
 <h2>${currentNode.properties["jcr:title"].string}</h2>
-New version
 <div class="intro">
     ${currentNode.properties.intro.string}
 </div>
