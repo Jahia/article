@@ -11,13 +11,13 @@ to develop components themselves, extending or integrating other objects.
 
 
 <pre><code> 
-[jnt:paragraph] > jnt:mainContent 
+[jnt:paragraph] &gt; jnt:mainContent 
  insertText (string, richtext) i18n 
- insertType (string,choicelist[resourceBundle]) = quote indexed=no < quote, exergue 
- insertPosition (string,choicelist[resourceBundle]) = left indexed=no < left, right 
+ insertType (string,choicelist[resourceBundle]) = quote indexed=no &lt; quote, exergue 
+ insertPosition (string,choicelist[resourceBundle]) = left indexed=no &lt; left, right 
  insertWidth (long) = "150" indexed=no 
  
-[jnt:article] > jnt:content, jmix:editorialContent, mix:title, jmix:tagged 
+[jnt:article] &gt; jnt:content, jmix:editorialContent, mix:title, jmix:tagged 
  intro (string, richtext) i18n 
  + * (jnt:paragraph) 
 </code></pre>
