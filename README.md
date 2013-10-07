@@ -9,7 +9,8 @@ text on the right or left of it.
 This module is a good example for integrators who wish to understand how module inheritance works and 
 to develop components themselves, extending or integrating other objects. 
 
- 
+
+<pre><code> 
 [jnt:paragraph] > jnt:mainContent 
  insertText (string, richtext) i18n 
  insertType (string,choicelist[resourceBundle]) = quote indexed=no < quote, exergue 
@@ -19,3 +20,4 @@ to develop components themselves, extending or integrating other objects.
 [jnt:article] > jnt:content, jmix:editorialContent, mix:title, jmix:tagged 
  intro (string, richtext) i18n 
  + * (jnt:paragraph) 
+</code></pre>
