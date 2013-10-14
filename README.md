@@ -1,4 +1,4 @@
-article
+Article
 =======
 
 This module defines an object of type “article” that is very structured and complete. It combines a title, an 
