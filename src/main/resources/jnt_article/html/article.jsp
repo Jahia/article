@@ -8,15 +8,23 @@
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 
-<h2>${currentNode.properties["jcr:title"].string}</h2>
-<div class="intro">
-    ${currentNode.properties.intro.string}
+<div itemscope itemtype="http://schema.org/Article">
+    <h2 itemprop="name">
+        ${currentNode.properties["jcr:title"].string}
+    </h2>
+    <div itemprop="headline">
+        ${currentNode.properties.intro.string}
+    </div>
+    <div itemprop="articleBody">
+        <c:forEach items="${currentNode.nodes}" var="paragraph">
+            <c:if test="${jcr:isNodeType(paragraph,'jnt:paragraph')}">
+                <template:module node="${paragraph}" view="default"/>
+            </c:if>
+        </c:forEach>
+        <c:if test="${renderContext.editMode}">
+            <template:module path="*"/>
+        </c:if>
+    </div>
+    <fmt:formatDate var="lastPublished" value="${currentNode.properties['j:lastPublished'].date.time}" pattern="yyyy-MM-dd'T'HH:mm:ssz"/>
+    <meta itemprop="datePublished" content="${lastPublished}">
 </div>
-<c:forEach items="${currentNode.nodes}" var="paragraph">
-    <c:if test="${jcr:isNodeType(paragraph,'jnt:paragraph')}">
-        <template:module node="${paragraph}" view="default"/>
-    </c:if>
-</c:forEach>
-<c:if test="${renderContext.editMode}">
-    <template:module path="*"/>
-</c:if>
