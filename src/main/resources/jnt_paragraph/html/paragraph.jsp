@@ -20,7 +20,7 @@
 <c:if test="${not empty currentNode.properties.image}">
     <div class="float${currentNode.properties.align.string}">
         <c:url value="${url.files}${currentNode.properties.image.node.path}" var="imageUrl"/>
-        <img itemprop="image" src="${imageUrl}" alt="${imageUrl}" align="${currentNode.properties.align.string}"/>
+        <img itemprop="image" src="${imageUrl}" alt="${currentNode.properties.image.node.properties['jcr:title'].string}" align="${currentNode.properties.align.string}"/>
     </div>
 </c:if>
 ${currentNode.properties.body.string}
