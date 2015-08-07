@@ -19,10 +19,14 @@
         </div>
     </c:if>
     <c:if test="${not empty currentNode.properties.image}">
-        <div class="float${currentNode.properties.align.string}">
+        <c:if test="${not empty currentNode.properties.align}">
+        <div class="pull-${currentNode.properties.align.string}">
+        </c:if>
             <c:url value="${url.files}${currentNode.properties.image.node.path}" var="imageUrl"/>
-            <img itemprop="image" src="${imageUrl}" alt="${currentNode.properties.image.node.properties['jcr:title'].string}" align="${currentNode.properties.align.string}"/>
+            <img itemprop="image" src="${imageUrl}" alt="${currentNode.properties.image.node.properties['jcr:title'].string}"/>
+        <c:if test="${not empty currentNode.properties.align}">
         </div>
+        </c:if>
     </c:if>
     ${currentNode.properties.body.string}
 </div>
