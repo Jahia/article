@@ -23,7 +23,4 @@
         <img src="${imageUrl}" alt="${imageUrl}" align="${currentNode.properties.align.string}"/>
     </div>
 </c:if>
-<div>
-    ${currentNode.properties.body.string}
-</div>
-<div class="clear"></div>
+${currentNode.properties.body.string}
