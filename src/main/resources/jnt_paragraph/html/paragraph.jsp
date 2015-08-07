@@ -19,7 +19,7 @@
         </div>
     </c:if>
     <c:if test="${not empty currentNode.properties.image}">
-        <c:if test="${not empty currentNode.properties.align}">
+        <c:if test="${not empty currentNode.properties.align and currentNode.properties.align ne 'default'}">
         <div class="pull-${currentNode.properties.align.string}">
         </c:if>
             <c:url value="${url.files}${currentNode.properties.image.node.path}" var="imageUrl"/>
