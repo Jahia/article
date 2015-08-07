@@ -6,21 +6,23 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
-<c:if test="${not empty currentNode.properties['jcr:title']}">
-    <h3>${currentNode.properties["jcr:title"].string}</h3>
-</c:if>
-<c:if test="${not empty currentNode.properties.insertText.string}">
-    <div class='${currentNode.properties.insertType.string}-top float${currentNode.properties.insertPosition.string}'
-         style='width:${currentNode.properties.insertWidth.string}px'>
-        <div class="${currentNode.properties.insertType.string}-bottom">
-                ${currentNode.properties.insertText.string}
+<div class="clearfix">
+    <c:if test="${not empty currentNode.properties['jcr:title']}">
+        <h3>${currentNode.properties["jcr:title"].string}</h3>
+    </c:if>
+    <c:if test="${not empty currentNode.properties.insertText.string}">
+        <div class='${currentNode.properties.insertType.string}-top float${currentNode.properties.insertPosition.string}'
+             style='width:${currentNode.properties.insertWidth.string}px'>
+            <div class="${currentNode.properties.insertType.string}-bottom">
+                    ${currentNode.properties.insertText.string}
+            </div>
         </div>
-    </div>
-</c:if>
-<c:if test="${not empty currentNode.properties.image}">
-    <div class="float${currentNode.properties.align.string}">
-        <c:url value="${url.files}${currentNode.properties.image.node.path}" var="imageUrl"/>
-        <img itemprop="image" src="${imageUrl}" alt="${currentNode.properties.image.node.properties['jcr:title'].string}" align="${currentNode.properties.align.string}"/>
-    </div>
-</c:if>
-${currentNode.properties.body.string}
+    </c:if>
+    <c:if test="${not empty currentNode.properties.image}">
+        <div class="float${currentNode.properties.align.string}">
+            <c:url value="${url.files}${currentNode.properties.image.node.path}" var="imageUrl"/>
+            <img itemprop="image" src="${imageUrl}" alt="${currentNode.properties.image.node.properties['jcr:title'].string}" align="${currentNode.properties.align.string}"/>
+        </div>
+    </c:if>
+    ${currentNode.properties.body.string}
+</div>
