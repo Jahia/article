@@ -41,7 +41,7 @@
     IF YOU DECIDE TO CHOOSE THE JSEL LICENSE, YOU MUST COMPLY WITH THE FOLLOWING TERMS:
 
     Alternatively, commercial and supported versions of the program - also known as
-    Enterprise Distributions - must be used in accordance with the terms and conditions 
+    Enterprise Distributions - must be used in accordance with the terms and conditions
     contained in a separate written agreement between you and Jahia Solutions Group SA.
 
     If you are unsure which license is appropriate for your use,
