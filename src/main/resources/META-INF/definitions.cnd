@@ -14,3 +14,11 @@
 [jnt:article] > jnt:content, jmix:editorialContent, mix:title, jmix:tagged, jmix:structuredContent orderable
  - intro (string, richtext) i18n
  + * (jnt:paragraph)
+
+[jnt:cast] > jnt:content, jmix:editorialContent
+ - * (undefined) multiple
+ - * (undefined)
+
+[jnt:cast2] > jnt:content, jmix:editorialContent
+ - * (undefined)
+ - * (undefined) multiple

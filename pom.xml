@@ -67,6 +67,15 @@
     <jahia-module-signature>MC0CFGK6+0+MfjSox4tvuNR9PFJyikDEAhUAh1yvI0bBCULVE/477trA+n8fw/0=</jahia-module-signature>
   </properties>
 
+  <dependencies>
+    <dependency>
+      <groupId>javax.websocket</groupId>
+      <artifactId>javax.websocket-api</artifactId>
+      <version>1.1</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
   <repositories>
     <repository>
       <releases>
